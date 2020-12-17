@@ -1,3 +1,5 @@
+#cython: language_level=3
+
 from std_iostream cimport istream, ostream
 from trie cimport Trie
 

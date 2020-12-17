@@ -1,14 +1,7 @@
-marisa-trie |pyversions| |travis| |appveyor|
-============================================
+marisa-trie
+===========
 
-.. |pyversions| image:: https://img.shields.io/pypi/pyversions/marisa-trie.svg
-   :target: https://pypi.python.org/pypi/marisa-trie
-
-.. |travis| image:: https://travis-ci.org/pytries/marisa-trie.svg
-   :target: https://travis-ci.org/pytries/marisa-trie
-
-.. |appveyor| image:: https://ci.appveyor.com/api/projects/status/p887ad4jbdg6u7yo?svg=true
-   :target: https://ci.appveyor.com/project/superbobry/marisa-trie-75wx1
+A fork of `maris-trie <https://github.com/pytries/marisa-trie>`_ that support Python 3.9.
 
 Static memory-efficient Trie-like structures for Python (2.7 and 3.4+)
 based on `marisa-trie`_ C++ library.

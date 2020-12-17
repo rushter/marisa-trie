@@ -1,4 +1,4 @@
-# cython: profile=False, embedsignature=True
+# cython: profile=False, embedsignature=True, language_level=3
 
 from __future__ import unicode_literals
 

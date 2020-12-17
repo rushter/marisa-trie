@@ -1,3 +1,5 @@
+#cython: language_level=3
+
 cimport key
 
 cdef extern from "<marisa/keyset.h>" namespace "marisa" nogil:

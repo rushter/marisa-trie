@@ -1,3 +1,5 @@
+#cython: language_level=3
+
 cimport agent
 cimport base
 cimport keyset
