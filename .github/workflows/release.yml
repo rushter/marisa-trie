@@ -1,0 +1,42 @@
+name: Build
+
+on: [push, ]
+
+jobs:
+  build_wheels:
+    name: Build wheels on ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 10
+    env:
+      CIBW_SKIP: "cp27-* cp34-* pp27-*"
+      CIBW_BEFORE_BUILD: "pip install cython"
+    strategy:
+      matrix:
+        os: [ubuntu-18.04, windows-latest, macos-latest]
+
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          submodules: true
+      - uses: actions/setup-python@v2
+        name: Install Python
+        with:
+          python-version: '3.8'
+
+      - name: Install cibuildwheel
+        run: |
+          python -m pip install cibuildwheel==1.7.1
+
+      - name: Install Visual C++ for Python 2.7
+        if: runner.os == 'Windows'
+        run: |
+          choco install vcpython27 -f -y
+
+      - name: Build wheels
+        run: |
+          cython src/*.pyx src/*.pxd --cplus -a
+          python -m cibuildwheel --output-dir wheelhouse
+
+      - uses: actions/upload-artifact@v2
+        with:
+          path: ./wheelhouse/*.whl
