@@ -45,7 +45,7 @@ CLASSIFIERS = [
     "Topic :: Text Processing :: Linguistic",
 ]
 
-setup(name="marisa-trie",
+setup(name="marisa-trie-m",
       version="0.7.6",
       description=DESCRIPTION,
       long_description=LONG_DESCRIPTION,
