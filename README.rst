@@ -23,12 +23,8 @@ Installation
 
 ::
 
-    pip install marisa-trie
+    pip install marisa-trie-m
 
-Usage
-=====
-
-See :ref:`Tutorial <tutorial>` and :ref:`API <api>` for details.
 
 Current limitations
 ===================
