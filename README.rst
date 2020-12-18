@@ -1,7 +1,7 @@
 marisa-trie
 ===========
 
-A fork of `maris-trie <https://github.com/pytries/marisa-trie>`_ that support Python 3.9.
+A fork of `marisa-trie <https://github.com/pytries/marisa-trie>`_ that support Python 3.9.
 
 Static memory-efficient Trie-like structures for Python (2.7 and 3.4+)
 based on `marisa-trie`_ C++ library.
